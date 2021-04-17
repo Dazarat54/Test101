@@ -1,6 +1,7 @@
 from matplotlib import pyplot
 from mpl_toolkits.mplot3d import Axes3D
 import csv
+
 def read_csv(fname):
     time = []
     x = []
@@ -67,10 +68,8 @@ X = [0]
 for i in range(n - 1):
     Vz.append(Vz[i] + az[i] *(t[i + 1] - t[i]))
     Z.append(Z[i] + Vz[i] *(t[i + 1] - t[i]) + 0.5 * az[i] * ((t[i + 1] - t[i]) ** 2))
-    
     Vy.append(Vy[i] + ay[i] *(t[i + 1] - t[i]))
     Y.append(Y[i] + Vy[i] *(t[i + 1] - t[i]) + 0.5 * ay[i] * ((t[i + 1] - t[i]) ** 2))
-    
     Vx.append(Vx[i] + ax[i] *(t[i + 1] - t[i]))
     X.append(X[i] + Vx[i] *(t[i + 1] - t[i]) + 0.5 * ax[i] * ((t[i + 1] - t[i]) ** 2))
 fig = pyplot.figure()
