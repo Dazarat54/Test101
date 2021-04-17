@@ -56,7 +56,6 @@ ax1.set_ylabel('Z')
 ax2.set_xlabel('t')
 ax2.set_ylabel('Z')
 pyplot.show()
-
 t, ax, ay, az, n = read_csv("P4.csv")
 Vz = [0]
 Z = [0]
