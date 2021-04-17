@@ -1,6 +1,8 @@
 from matplotlib import pyplot
 from mpl_toolkits.mplot3d import Axes3D
 import csv
+
+
 def read_csv(fname):
     time = []
     x = []
@@ -11,7 +13,6 @@ def read_csv(fname):
     t0 = 0
     with open(fname, newline = '') as csvfile:
         datareader = csv.reader(csvfile)
-        
         for row in datareader:
             if (len(row) >= 4):
                 if init:
@@ -31,6 +32,7 @@ pyplot.plot(t, ax)
 pyplot.plot(t, ay)
 pyplot.plot(t, az)
 pyplot.show()
+
 
 t, ax, ay, az, n  = read_csv("A2.csv")
 pyplot.plot(t, az)
@@ -56,6 +58,8 @@ ax1.set_ylabel('Z')
 ax2.set_xlabel('t')
 ax2.set_ylabel('Z')
 pyplot.show()
+
+
 t, ax, ay, az, n = read_csv("P4.csv")
 Vz = [0]
 Z = [0]
