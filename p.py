@@ -2,7 +2,6 @@ from matplotlib import pyplot
 from mpl_toolkits.mplot3d import Axes3D
 import csv
 
-
 def read_csv(fname):
     time = []
     x = []
@@ -33,7 +32,6 @@ pyplot.plot(t, ay)
 pyplot.plot(t, az)
 pyplot.show()
 
-
 t, ax, ay, az, n  = read_csv("A2.csv")
 pyplot.plot(t, az)
 pyplot.plot(t, ax)
@@ -58,7 +56,6 @@ ax1.set_ylabel('Z')
 ax2.set_xlabel('t')
 ax2.set_ylabel('Z')
 pyplot.show()
-
 
 t, ax, ay, az, n = read_csv("P4.csv")
 Vz = [0]
