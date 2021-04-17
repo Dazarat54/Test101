@@ -1,7 +1,6 @@
 from matplotlib import pyplot
 from mpl_toolkits.mplot3d import Axes3D
 import csv
-
 def read_csv(fname):
     time = []
     x = []
@@ -79,5 +78,3 @@ a.set_xlabel('X Label')
 a.set_ylabel('Y Label')
 a.set_zlabel('Z Label')
 pyplot.show()
-
-    
