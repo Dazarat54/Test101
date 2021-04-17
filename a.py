@@ -25,11 +25,13 @@ def read_csv(fname):
                 else:
                     init = True
     return time, x, y, z, n
+
 t, ax, ay, az, n  = read_csv("Accelerometer.csv")
 pyplot.plot(t, ax)
 pyplot.plot(t, ay)
 pyplot.plot(t, az)
 pyplot.show()
+
 t, ax, ay, az, n  = read_csv("A2.csv")
 pyplot.plot(t, az)
 pyplot.plot(t, ax)
@@ -46,16 +48,15 @@ for i in range(n - 1):
     V.append(V[i] + az[i] *(t[i + 1] - t[i]))
     Z.append(Z[i] + V[i] *(t[i + 1] - t[i]) + 0.5 * az[i] * ((t[i + 1] - t[i]) ** 2))
 Z0 = Z[l:]
-t0 = t[l:]
-        
+t0 = t[l:]      
 ax1.plot(t0, Z0, 'b-')
 ax2.plot(t, Z,'r-')
-
 ax1.set_xlabel("t/2")
 ax1.set_ylabel('Z')
 ax2.set_xlabel('t')
 ax2.set_ylabel('Z')
 pyplot.show()
+
 t, ax, ay, az, n = read_csv("P4.csv")
 Vz = [0]
 Z = [0]
@@ -75,9 +76,7 @@ for i in range(n - 1):
 fig = pyplot.figure()
 a = fig.add_subplot(111, projection='3d')
 a.scatter(X, Y, Z, c='r', marker='o')
-
 a.set_xlabel('X Label')
 a.set_ylabel('Y Label')
 a.set_zlabel('Z Label')
-
 pyplot.show()
