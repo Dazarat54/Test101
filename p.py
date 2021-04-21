@@ -36,6 +36,9 @@ t, ax, ay, az, n  = read_csv("A2.csv")
 pyplot.plot(t, az)
 pyplot.plot(t, ax)
 pyplot.show()
+
+
+t, ax, ay, az, n  = read_csv("Accelerometer.csv")
 V = [0]
 Z = [0]
 fig = pyplot.figure()
@@ -50,7 +53,7 @@ for i in range(n - 1):
 Z0 = Z[l:]
 t0 = t[l:]      
 ax1.plot(t0, Z0, 'b-')
-ax2.plot(t, Z,'r-')
+ax2.plot(t, Z, 'r-')
 ax1.set_xlabel("t/2")
 ax1.set_ylabel('Z')
 ax2.set_xlabel('t')
